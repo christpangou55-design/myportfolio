@@ -1,0 +1,466 @@
+:root {
+  --main:#6c63ff;
+  --dark:#0f1224;
+  --light:#f5f6fa;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body {
+  background:var(--dark);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav {
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:15px;
+  background:rgba(15,18,36,.8);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  z-index:1000;
+}
+
+nav a {
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  position:relative;
+}
+
+nav a::after {
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0;
+  height:2px;
+  background:var(--main);
+  transition:.3s;
+}
+
+nav a:hover::after {
+  width:100%;
+}
+
+/* HEADER */
+header {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(135deg, #1a1f4b, #0f1224);
+  animation:fadeIn 2s ease;
+}
+
+header img {
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  border:4px solid var(--main);
+  margin-bottom:20px;
+  animation:float 4s ease-in-out infinite;
+}
+
+header h1 {
+  font-size:3rem;
+}
+
+header span {
+  color:var(--main);
+}
+
+header p {
+  margin-top:15px;
+  font-size:1.2rem;
+  opacity:.9;
+}
+
+/* SECTIONS */
+section {
+  padding:100px 10%;
+}
+
+h2 {
+  font-size:2.5rem;
+  margin-bottom:40px;
+  text-align:center;
+}
+
+/* CARDS */
+.card {
+  background:#1a1f4b;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  transition:.4s;
+}
+
+.card:hover {
+  transform:translateY(-10px) scale(1.02);
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+/* TIMELINE */
+.timeline {
+  border-left:3px solid var(--main);
+  padding-left:30px;
+}
+
+.timeline div {
+  margin-bottom:30px;
+}
+
+/* FOOTER */
+footer {
+  padding:40px;
+  text-align:center;
+  background:#080a18;
+  opacity:.8;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+@keyframes float {
+  0%,100% { transform:translateY(0); }
+  50% { transform:translateY(-15px); }
+}
+
+.reveal {
+  opacity:0;
+  transform:translateY(60px);
+  transition:1s;
+}
+
+.reveal.active {
+  opacity:1;
+  transform:translateY(0);
+}
+
+header img {
+  width:160px;
+  height:182px;
+  border-radius:50%;
+  object-fit: cover;      
+  object-position: top;   
+  border:4px solid var(--main);
+  
+}
+
+/* HEADER ACTIONS */
+.header-actions {
+  margin-top:30px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:25px;
+}
+
+/* SOCIAL ICONS */
+.social-links {
+  display:flex;
+  gap:20px;
+}
+
+.social-links a {
+  width:45px;
+  height:45px;
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  
+}
+
+.social-links img {
+  width:22px;
+  height:22px;
+  filter:invert(1);
+}
+
+.social-links a:hover {
+  transform:translateY(-6px) scale(1.1);
+  background:var(--main);
+}
+
+/* CV BUTTON */
+.cv-btn {
+  padding:14px 30px;
+  background:var(--main);
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:600;
+  box-shadow:0 10px 30px rgba(108,99,255,0.4);
+  transition:0.4s;
+}
+
+.cv-btn:hover {
+  transform:scale(1.08);
+  box-shadow:0 15px 40px rgba(108,99,255,0.6);
+}
+
+.veille {
+  padding: 40px;
+ 
+}
+
+.veille h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.veille-desc {
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.veille-card {
+  display: flex;
+  gap: 20px;
+ background:#1a1f4b;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.veille-card img {
+  width: 300px;
+  object-fit: cover;
+}
+
+.veille-content {
+  padding: 20px;
+}
+
+.veille-content h3 {
+  margin-bottom: 10px;
+}
+
+.veille-content p {
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+
+
+
+
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* TABLETTE */
+@media (max-width: 1024px) {
+
+  section {
+    padding:80px 6%;
+  }
+
+  header h1 {
+    font-size:2.5rem;
+  }
+
+  h2 {
+    font-size:2.2rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  nav {
+    flex-wrap:wrap;
+    gap:15px;
+    padding:10px;
+  }
+
+  nav a {
+    font-size:0.9rem;
+  }
+
+  header {
+    padding:0 20px;
+  }
+
+  header img {
+    width:130px;
+    height:130px;
+  }
+
+  header h1 {
+    font-size:2rem;
+  }
+
+  header p {
+    font-size:1rem;
+  }
+
+  section {
+    padding:70px 5%;
+  }
+
+  h2 {
+    font-size:1.8rem;
+  }
+
+  .grid {
+    grid-template-columns:1fr;
+  }
+
+  .timeline {
+    padding-left:20px;
+  }
+}
+
+/* PETITS TÉLÉPHONES */
+@media (max-width: 480px) {
+
+  header h1 {
+    font-size:1.7rem;
+  }
+
+  header p {
+    font-size:0.95rem;
+  }
+
+  nav a {
+    font-size:0.8rem;
+  }
+
+  footer {
+    font-size:0.8rem;
+  }
+}
+
+
+/* ====== GLOBAL ====== */
+.veille {
+  padding: 40px 20px;
+  
+  max-width: 1100px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.veille h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.veille-desc {
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* ====== CARD ====== */
+.veille-card {
+  display: flex;
+  gap: 20px;
+  background:#1a1f4b;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* IMAGE */
+.veille-card img {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.veille-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.veille-content h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.veille-content p {
+  color: #ffffff;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.veille-link {
+  margin-top: 20px;
+  width: fit-content;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.veille-link:hover {
+  text-decoration: underline;
+}
+
+/* ====== RESPONSIVE MOBILE ====== */
+@media (max-width: 768px) {
+  .veille h2 {
+    font-size: 26px;
+  }
+
+  .veille-card {
+    flex-direction: column;
+  }
+
+  .veille-card img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .veille-content {
+    padding: 20px;
+  }
+
+  .veille-content h3 {
+    font-size: 20px;
+  }
+
+  .veille-content p {
+    font-size: 15px;
+  }
+}
+
+/* ====== VERY SMALL SCREENS ====== */
+@media (max-width: 480px) {
+  .veille {
+    padding: 30px 15px;
+  }
+
+  .veille-content p {
+    font-size: 14px;
+  }
+}
+

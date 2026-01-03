@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | Christ Jeremiah</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <a href="#about">Présentation</a>
+    <a href="#projects">Projets</a>
+    <a href="#experience">Expérience</a>
+    <a href="#veille">Veille</a>
+    <a href="#parcours">Parcours</a>
+  </nav>
+
+  <header>
+    <img src="image/photo.jpg" alt="Photo de profil">
+    <h1>My <span>Portfolio</span></h1>
+
+     
+    <div class="card">
+      <p>Je m'appelle <strong>PANGOU Christ Jeremiah</strong><br>Je développe des interfaces web modernes en HTML, CSS et JavaScript, avec un design responsive et des animations dynamiques.</p>
+    </div>
+
+    <div class="header-actions">
+
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/christ-pangou-97093b348/" target="_blank" aria-label="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+    </a>
+
+    <a href="https://github.com" target="_blank" aria-label="GitHub">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+    </a>
+
+    <a href="https://mail.google.com/mail/u/0/?hl=fr#inbox" aria-label="Email">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Mail">
+    </a>
+  </div>
+
+  <a href="pdf/CV_2026-01-03_CHRIS_PANGOU.pdf" class="cv-btn" download>
+    Télécharger mon CV
+  </a>
+
+</div>
+
+    
+  </header>
+
+  <section id="about" class="reveal">
+   
+  </section>
+
+  <section id="projects" class="reveal">
+    <h2>💻 Mes Projets</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="" alt="">
+        <p>Portfolio personnel</p>
+      </div>
+      <div class="card">Site vitrine</div>
+      <div class="card">Application web</div>
+    </div>
+  </section>
+
+  <section id="experience" class="reveal">
+    <h2>🧑‍💼 Expérience Professionnelle</h2>
+    <div class="timeline">
+      <div>
+        <h3>Stage maintenance informatique-save</h3>
+        <p>reparation des ordinateur</p>
+      </div>
+    </div>
+    <div class="timeline">
+      <div>
+        <h3>Stage Développeur Web  -business privé</h3>
+        <p>Création  d'un  sites web</p>
+      </div>
+    </div>
+    <div class="timeline">
+      <div>
+        <h3>Stage Développeur Web  -business privé</h3>
+        <p>Création  d'un  sites web</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="veille" class="reveal">
+    <section class="veille">
+  <h2>Veille technologique</h2>
+  <p class="veille-desc">
+    Thème : <strong>L’intelligence artificielle comme outil de composition musicale</strong>
+  </p>
+
+  <div class="veille-card">
+    <img 
+      src="https://images.unsplash.com/photo-1511379938547-c1f69419868d"
+      alt="IA et musique"
+    />
+
+    <div class="veille-content">
+      <h3>L’IA au service de la composition musicale</h3>
+      <p>
+        L’intelligence artificielle est aujourd’hui utilisée pour aider les musiciens
+        à composer des mélodies, harmonies et musiques complètes. Des outils comme
+        AIVA ou Suno AI analysent des milliers d’œuvres pour générer de nouvelles créations.
+      </p>
+
+      
+    </div>
+  </div>
+</section>
+
+  </section>
+
+  <section id="parcours" class="reveal">
+    <h2>🎓 Parcours</h2>
+    <div class="timeline">
+      <div>
+        <h3>BTS SIO – SLAM</h3>
+        <p>Développement d'applications web</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 – My Portfolio | Christ Jeremiah
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      reveals.forEach(r => {
+        if(r.getBoundingClientRect().top < window.innerHeight - 100)
+          r.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
